@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
-from gevent.pywsgi import WSGIServer
-from gevent_ws import WebSocketHandler
+# from gevent.pywsgi import WSGIServer
+# from gevent_ws import WebSocketHandler
 from datetime import datetime
 import json
 import random
@@ -54,7 +54,7 @@ def Terms():
 
 if __name__=='__main__':
     # Debug/Development
-    # app.run(debug=False)
+    app.run(debug=False, port=8000)
     # Production
-    server = WSGIServer(('', 5000), app, handler_class=WebSocketHandler)
-    server.serve_forever()
+    # server = WSGIServer(('', 5000), app, handler_class=WebSocketHandler)
+    # server.serve_forever()
