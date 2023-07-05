@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{name}} wishing you Happy {{events['event']}}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"  type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/show_card.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css"> 
+</head>
+<body>
+    <div class="main_page" id="particles-js">
+        <div class="greet_card">
+            <div class="card">
+                <p><h3 id="name">{{name}}</h3></p>
+                <p>Wishing you</p>
+                <h1><strong>Happy<br>
+                    {% if events['event'] == 'New Year' %}
+                        {{date.strftime('%Y')}}
+                    {% else %}
+                        {{events['event']}}
+                    {% endif %}
+                </strong></h1>
+                <img src="{{ url_for('static', filename=events['image']) }}" alt="gift">
+                <span><p>"{{events['text']}}"</p></span>
+            </div>
+        </div>
+        <div class="share_btn">
+            <span><i class="fas fa-share-alt"></i> Share!</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=Have%20you%20seen%20this???%0D%0AThere%20is%20a%20surprise%20gift%20for%20you....%0D%0A{{url}}%2F{{encodedname}}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:?subject=Surprise%20Message!!!&body=Have%20you%20seen%20this???%0D%0AThere%20is%20a%20surprise%20gift%20for%20you....%0D%0A{{url}}%2F{{encodedname}}" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="whatsapp://send?text=Have%20you%20seen%20this???%0D%0ASurprise%20Message!!!%20-%20{{url}}%2F{{encodedname}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a onclick="Copy()"><i class="far fa-copy"></i></a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/confetti.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        confetti.start();
+    </script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{events['event']}} Greet</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"  type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/show_card.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- {% set file = events['image'] %} -->
+    <div class="main_page" id="particles-js">
+        <div class="greet_card">
+            <div class="card">
+                <p><h3>{{name}}</h3></p>
+                <p>Wishing you</p>
+                <h1><strong>Happy<br>
+                    {% if events['event'] == 'New Year' %}
+                        {{date.strftime('%Y')}}
+                    {% else %}
+                        {{events['event']}}
+                    {% endif %}
+                </strong></h1>
+                <img src="{{ url_for('static', filename=events['image']) }}" alt="gift">
+                <span><p>"{{events['text']}}"</p></span>
+            </div>
+        </div>
+        <div class="name">
+            <form action="/{{type}}" method="POST">
+                <input type="text" id="your_name" name="name" placeholder="Enter Your Name" required>
+                <button type="submit" id="btn">Greet</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/confetti.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        confetti.start();
+    </script>
+</body>
+</html>

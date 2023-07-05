@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block body %}
+    <main>
+        <section class="heading">
+            <div class="container headline">
+                <div class="tag_line">
+                    <h1 class="tag_line_head taghead_style">Wishes That Matter</h1>
+                    <p class="tag_line_text tagtext_style">Greeting from the heart for the beloved. Helping you to share Wishes.</p>
+                    <h4 class="tag">It's way of Greeting on <span>{{tag}}</span></h4>
+                </div>
+            </div>
+        </section>
+        <div class="cards">
+            <div class="container cards_holder">
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='newyear.jpeg') }}" alt="New Year" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>New Year</b></h4>
+                        <button onclick="window.open('/new_year');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='holi.jpeg') }}" alt="Holi" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Happy Holi</b></h4>
+                        <button onclick="window.open('/holi');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='Eid.jpeg') }}" alt="Eid Mubarak" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Eid Mubarak</b></h4>
+                        <button onclick="window.open('/eid_mubarak');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='independence.jpeg') }}" alt="Independence Day" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Independence Day</b></h4>
+                        <button onclick="window.open('/independence_day');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='dussehra.jpeg') }}" alt="Dussehra" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Happy Dussehra</b></h4>
+                        <button onclick="window.open('/dussehra');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='diwali.jpeg') }}" alt="Diwali" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Happy Diwali</b></h4>
+                        <button onclick="window.open('/diwali');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='christmas.jpeg') }}" alt="Christmas" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Christmas</b></h4>
+                        <button onclick="window.open('/christmas');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='valentine.jpeg') }}" alt="Valentine" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Valentine's Day</b></h4>
+                        <button onclick="window.open('/valentine_day');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='friendship.jpeg') }}" alt="Friendship Day" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Friendship Day</b></h4>
+                        <button onclick="window.open('/friendship_day');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='teacher.jpeg') }}" alt="Teacher Day" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Teacher's Day</b></h4>
+                        <button onclick="window.open('/teachers_day');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='birthday.jpg') }}" alt="Birthday Day" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Happy Birthday</b></h4>
+                        <button id="btn" onclick="window.open('/birthday');"><strong>Greet</strong></button>
+                    </div>
+                </div>
+                <div class="card1">
+                    <img src="{{ url_for('static', filename='anniversary.jpeg') }}" alt="Anniversary" style="border-top-left-radius: 7px; border-top-right-radius: 7px; width:100%; height:75%;">
+                    <div class="card_text">
+                        <h4><b>Anniversary</b></h4>
+                        <button onclick="window.open('/anniversary');" id="btn"><strong>Greet</strong></button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom1">
+                <div class="bottom_contain">
+                    <div class="bottom_text">
+                        <p>
+                            <h1>Express your Feeling to your Loved once by Greeting...</h1>
+                            <ul style="list-style-type: circle; margin: 35px 0 0 25px; color: #212529;">
+                                <li>Bless your Friendship.</li>
+                                <li>Card Powerded by Feeling.</li>
+                                <li>Life is like a Greeting Card.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <img src="{{ url_for('static', filename='bt_1.png') }}" style="width:500px; height: 500px; margin-top: 20px;">
+                </div>
+            </div>
+            <div class="bottom2">
+                <div class="bottom_contain">
+                    <img src="{{ url_for('static', filename='bt_2.png') }}" style="width:300px; height: 300px; clip-path: circle(150px); margin-top: 120px;">
+                    <div class="bottom_text">
+                        <p>
+                            <h1>Now Greet from Anywhere <br>
+                                <span style="font-size: 25px;">Stay home, Stay safe!!!</span>
+                            </h1>
+                            <ul style="list-style-type: circle; margin: 25px 0 0 25px; color: #212529;">
+                                <li>Make someone Happy.</li>
+                                <li>Celebrate every Moments.</li>
+                                <li>Gift a Greeting Card by staying at home.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

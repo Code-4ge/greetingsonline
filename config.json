@@ -1,0 +1,77 @@
+{
+    "params":
+    {
+        "new_year":
+        {
+            "event": "New Year",
+            "text": "Nights will be dark but days will be light, wishing your life to be always bright. Happy New Year!",
+            "image": "n_y.gif"
+        },
+        "holi":
+        {
+            "event": "Holi",
+            "text": "May this festival of colors fill colors in your life. To every shade of you, I wish happy and colorful holi!",
+            "image": "h.gif"
+        },
+        "eid_mubarak":
+        {
+            "event": "Eid",
+            "text": "May the sweetness of sewaiyan stay in your mouth and in our relationship for years to come. Eid Mubarak!",
+            "image": "e_m.gif"
+        },
+        "independence_day":
+        {
+            "event": "Independence Day",
+            "text": "The bravery of our soldiers would not be wasted in the books of history or statues they would be cherished forever. Happy Independence Day!",
+            "image": "i_d.gif"
+        },
+        "dussehra":
+        {
+            "event": "Dussehra",
+            "text": "May this Dussehra burn all your worries with Ravana and bring you and your family Lots of Happiness. Happy Dussehra!",
+            "image": "du.gif"
+        },
+        "diwali":
+        {
+            "event": "Diwali",
+            "text": "Many-many wishes for Diwali. May the divine lights of Diwali enlighten your home and life. Happy Diwali!",
+            "image": "di.gif"
+        },
+        "christmas":
+        {
+            "event": "Christmas",
+            "text": "I have asked Santa to deliver to your home my warmest wishes for you and your family. Merry Christmas!",
+            "image": "c.gif"
+        },
+        "valentine_day":
+        {
+            "event": "Valentine Day",
+            "text": "To my only love of life, my dream of having you by my side for entire life is finally going to be lived. Be my valentine forever? Happy  Valentines Day!",
+            "image": "v_d.gif"
+        },
+        "friendship_day":
+        {
+            "event": "Friendship Day",
+            "text": "One of the best gifts of my life is having a true friend like you. Happy Friendship Day!",
+            "image": "f_d.gif"
+        },
+        "teachers_day":
+        {
+            "event": "Teachers Day",
+            "text": "A teacher through his hard work and dedication makes the world a better place. Happy Teachers Day!",
+            "image": "t_d.gif"
+        },
+        "birthday":
+        {
+            "event": "Birthday",
+            "text": "May the joy that you have spread in the past come back to you on this day. Wishing you a very Happy Birthday.",
+            "image": "b_d.gif"
+        },
+        "anniversary":
+        {
+            "event": "Anniversary",
+            "text": "Sending love and good wishes to one of our all-time favorite couples. Happy Anniversary!",
+            "image": "a.gif"
+        }
+    }
+}

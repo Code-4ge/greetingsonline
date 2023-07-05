@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GreetOnline</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"  type="image/x-icon">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="collapse" id="navbarHeader">
+            <div class="container nav">
+                <div class="about">
+                    <h4 class="about_head">About</h4>
+                    <p class="about_text">Now make occasion a auspicious one with Greeting. GreetOnline helps you to share Wishes from heart to heart, give them your Best Wishes with Greeting. Your feeling with a new way of art.</p>
+                </div>
+                <div class="contact">
+                    <h4 class="contact_head">Contact</h4>
+                    <ul class="contact_text">
+                        <li><a href="https://www.facebook.com/neeraj.panmand.9" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/neerajpanmand" target="_blank">Instagram</a></li>
+                        <li><a href="mailto:greetonline@usako.net" target="_blank">Mail Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav_bar">
+            <div class="container">
+                <a href="/" class="brand">    
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt=" GO" id="logo">
+                    <strong>GreetOnline</strong>
+                </a>
+                <span>
+                    <input type="checkbox" id="toggle" onclick="classToggle()">
+                    <label for="toggle" id="toggl_label">&#9776;</label>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+
+    <footer class="footer_container">
+        <div class="footer_text">
+            <p>Copyright &copy; 2021 - GreetOnline</p>
+            <p><a href="/privacy_policy">Our Privacy Policy</a> | <a href="/terms_and_conditions">Terms & Conditions</a></p>
+            <div class="social_btn">
+                <a href="https://www.facebook.com/neeraj.panmand.9" target="_blank">
+                    <img src="{{ url_for('static', filename='facebook.png') }}" alt="FB">
+                </a>
+                <a href="https://www.instagram.com/neerajpanmand" target="_blank">
+                    <img src="{{ url_for('static', filename='instagram.png') }}" alt="IG">
+                </a>
+                <a href="mailto:greetonline@usako.net" target="_blank">
+                    <img src="{{ url_for('static', filename='mail.png') }}" alt="Mail">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
