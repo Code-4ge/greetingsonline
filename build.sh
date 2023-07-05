@@ -12,6 +12,4 @@ python3.9 -m pip install -r requirements.txt
 echo "Build end"
 # Collect static files
 echo "Running..."
-set FLASK_APP=index
-set FLASK_ENV=production
 python3.9 -m flask run
