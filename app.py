@@ -56,5 +56,5 @@ if __name__=='__main__':
     # Debug/Development
     # app.run(debug=False, port=8000)
     # Production
-    server = WSGIServer(('', 8000), app, handler_class=WebSocketHandler)
+    server = WSGIServer(('', 8080), app, handler_class=WebSocketHandler)
     server.serve_forever()
