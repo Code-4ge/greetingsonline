@@ -12,29 +12,43 @@
 </head>
 <body>
     <!-- {% set file = events['image'] %} -->
-    <div class="main_page" id="particles-js">
-        <div class="greet_card">
-            <div class="card">
-                <p><h3>{{name}}</h3></p>
-                <p>Wishing you</p>
-                <h1><strong>Happy<br>
-                    {% if events['event'] == 'New Year' %}
-                        {{date.strftime('%Y')}}
-                    {% else %}
-                        {{events['event']}}
-                    {% endif %}
-                </strong></h1>
-                <img src="{{ url_for('static', filename=events['image']) }}" alt="gift">
-                <span><p>"{{events['text']}}"</p></span>
+    {% if events['event'] == 'Birthday' %}
+        <div class="main_page" id="particles-js">
+            <div class="greet_card">
+                <div class="card">
+<!--                     <p><h3>{{name}}</h3></p>
+                    <p>Wishing you</p> -->
+                    <span><p>"{{events['text']}}"</p></span>
+                    <img src="{{ url_for('static', filename=events['image']) }}" alt="gift">
+                    <h1><strong>Happy<br> {{events['event']}}</strong></h1>
+                </div>
             </div>
         </div>
-        <div class="name">
-            <form action="/{{type}}" method="POST">
-                <input type="text" id="your_name" name="name" placeholder="Enter Your Name" required>
-                <button type="submit" id="btn">Greet</button>
-            </form>
+    {% else %}
+        <div class="main_page" id="particles-js">
+            <div class="greet_card">
+                <div class="card">
+                    <p><h3>{{name}}</h3></p>
+                    <p>Wishing you</p>
+                    <h1><strong>Happy<br>
+                        {% if events['event'] == 'New Year' %}
+                            {{date.strftime('%Y')}}
+                        {% else %}
+                            {{events['event']}}
+                        {% endif %}
+                    </strong></h1>
+                    <img src="{{ url_for('static', filename=events['image']) }}" alt="gift">
+                    <span><p>"{{events['text']}}"</p></span>
+                </div>
+            </div>
+            <div class="name">
+                <form action="/{{type}}" method="POST">
+                    <input type="text" id="your_name" name="name" placeholder="Enter Your Name" required>
+                    <button type="submit" id="btn">Greet</button>
+                </form>
+            </div>
         </div>
-    </div>
+    {% endif %}
     <script src="{{ url_for('static', filename='js/confetti.js') }}"></script>
     <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
